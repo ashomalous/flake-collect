@@ -9,6 +9,10 @@
     nixpkgs-lib.url = "github:nix-community/nixpkgs.lib";
     systems.url = "github:nix-systems/default";
 
+    flake-utils = {
+      url = "github:numtide/flake-utils";
+      inputs.systems.follows = "systems";
+    };
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs-lib";
@@ -39,6 +43,96 @@
       url = "github:denful/dendrix";
       inputs.import-tree.follows = "import-tree";
       inputs.nixpkgs-lib.follows = "nixpkgs-lib";
+    };
+
+    flake-compat.url = "github:nixos/flake-compat";
+
+    gitignore = {
+      url = "github:hercules-ci/gitignore.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    git-hooks = {
+      url = "github:cachix/git-hooks.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-compat.follows = "flake-compat";
+      inputs.gitignore.follows = "gitignore";
+    };
+
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nur = {
+      url = "github:nix-community/nur";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-parts.follows = "flake-parts";
+    };
+
+    nix-index = {
+      url = "github:nix-community/nix-index";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-compat.follows = "flake-compat";
+    };
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    fenix = {
+      url = "github:nix-community/fenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.rust-analyzer-src.follows = "rust-analyzer-src"; # unnecessary, does not affect flake inputs
+    };
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    crane.url = "github:ipetkov/crane";
+
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nix-init = {
+      url = "github:nix-community/nix-init";
+      inputs.flake-parts.follows = "flake-parts";
+      inputs.treefmt-nix.follows = "treefmt-nix";
+      inputs.fenix.follows = "fenix";
+    };
+
+    lib-aggregate = {
+      url = "github:nix-community/lib-aggregate";
+      inputs.flake-utils.follows = "flake-utils";
+      inputs.nixpkgs-lib.follows = "nixpkgs-lib";
+    };
+
+    nixpkgs-wayland = {
+      url = "github:nix-community/nixpkgs-wayland";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.lib-aggregate.follows = "lib-aggregate";
+      inputs.flake-compat.follows = "flake-compat";
+    };
+
+    flake-root.url = "github:srid/flake-root";
+
+    vulnix = {
+      url = "github:nix-community/vulnix";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-root.follows = "flake-root";
+      inputs.flake-parts.follows = "flake-parts";
+      inputs.flake-compat.follows = "flake-compat";
+      inputs.treefmt-nix.follows = "treefmt-nix";
+    };
+
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.pre-commit.follows = "git-hooks";
+      inputs.crane.follows = "crane";
+      inputs.rust-overlay.follows = "rust-overlay";
     };
   };
 
