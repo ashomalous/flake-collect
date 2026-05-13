@@ -134,6 +134,42 @@
       inputs.crane.follows = "crane";
       inputs.rust-overlay.follows = "rust-overlay";
     };
+
+    optnix = {
+      url = "github:water-sucks/optnix";
+      inputs.flake-compat.follows = "flake-compat";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nixos-cli = {
+      url = "github:nix-community/nixos-cli";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-compat.follows = "flake-compat";
+      inputs.flake-parts.follows = "flake-parts";
+      inputs.optnix.follows = "optnix";
+    };
+
+    quickshell = {
+      url = "github:quickshell-mirror/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    dank-material-shell = {
+      url = "github:AvengeMedia/DankMaterialShell";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.quickshell.follows = "quickshell";
+      inputs.flake-compat.follows = "flake-compat";
+    };
+
+    dgop = {
+      url = "github:AvengeMedia/dgop";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    dsearch = {
+      url = "github:AvengeMedia/danksearch";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = _: { };
