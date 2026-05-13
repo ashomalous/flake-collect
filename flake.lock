@@ -436,6 +436,32 @@
         "type": "github"
       }
     },
+    "nix-gaming": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "git-hooks": [
+          "git-hooks"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1778644418,
+        "narHash": "sha256-vqrq47aFxuIUojdWlNqaQ4TEtIiNR9rI9eSZHzPaUYQ=",
+        "owner": "fufexan",
+        "repo": "nix-gaming",
+        "rev": "4b98e5ed48e1973c54a535310573238c81c6fb76",
+        "type": "github"
+      },
+      "original": {
+        "owner": "fufexan",
+        "repo": "nix-gaming",
+        "type": "github"
+      }
+    },
     "nix-index": {
       "inputs": {
         "flake-compat": [
@@ -503,6 +529,32 @@
       "original": {
         "owner": "nix-community",
         "repo": "nix-init",
+        "type": "github"
+      }
+    },
+    "nix-minecraft": {
+      "inputs": {
+        "flake-compat": [
+          "flake-compat"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": [
+          "systems"
+        ]
+      },
+      "locked": {
+        "lastModified": 1778039471,
+        "narHash": "sha256-Arjg44jFcpSqOKK05EIxbKIjhfjou/EGF12COFU+9QA=",
+        "owner": "Infinidoge",
+        "repo": "nix-minecraft",
+        "rev": "87611ef4788116de05f851920c5958f0c37d5b05",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Infinidoge",
+        "repo": "nix-minecraft",
         "type": "github"
       }
     },
@@ -624,6 +676,55 @@
         "type": "github"
       }
     },
+    "noctalia-qs": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": [
+          "systems"
+        ],
+        "treefmt-nix": [
+          "treefmt-nix"
+        ]
+      },
+      "locked": {
+        "lastModified": 1778377995,
+        "narHash": "sha256-uUzHDHqQF1rdVNiTa05L0mML3/d7fpbAShjCRWxbrBQ=",
+        "owner": "noctalia-dev",
+        "repo": "noctalia-qs",
+        "rev": "d8327a723eed6dd9aebe8e0b162126f390e827df",
+        "type": "github"
+      },
+      "original": {
+        "owner": "noctalia-dev",
+        "repo": "noctalia-qs",
+        "type": "github"
+      }
+    },
+    "noctalia-shell": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "noctalia-qs": [
+          "noctalia-qs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1778694748,
+        "narHash": "sha256-rnz+rUI1a+oJ+XiSohOCJwUkydiadlFyl1J+kHubxuc=",
+        "owner": "noctalia-dev",
+        "repo": "noctalia-shell",
+        "rev": "56084c6a08d19cf456fcb8888948cd2a99c68ef1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "noctalia-dev",
+        "repo": "noctalia-shell",
+        "type": "github"
+      }
+    },
     "nur": {
       "inputs": {
         "flake-parts": [
@@ -714,9 +815,11 @@
         "lanzaboote": "lanzaboote",
         "lib-aggregate": "lib-aggregate",
         "nix-darwin": "nix-darwin",
+        "nix-gaming": "nix-gaming",
         "nix-index": "nix-index",
         "nix-index-database": "nix-index-database",
         "nix-init": "nix-init",
+        "nix-minecraft": "nix-minecraft",
         "nixos-cli": "nixos-cli",
         "nixpkgs": [
           "nixpkgs-unstable"
@@ -725,13 +828,16 @@
         "nixpkgs-stable": "nixpkgs-stable",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nixpkgs-wayland": "nixpkgs-wayland",
+        "noctalia-qs": "noctalia-qs",
+        "noctalia-shell": "noctalia-shell",
         "nur": "nur",
         "optnix": "optnix",
         "quickshell": "quickshell",
         "rust-overlay": "rust-overlay",
         "systems": "systems",
         "treefmt-nix": "treefmt-nix",
-        "vulnix": "vulnix"
+        "vulnix": "vulnix",
+        "zen-browser": "zen-browser"
       }
     },
     "rust-analyzer-src": {
@@ -835,6 +941,29 @@
       "original": {
         "owner": "nix-community",
         "repo": "vulnix",
+        "type": "github"
+      }
+    },
+    "zen-browser": {
+      "inputs": {
+        "home-manager": [
+          "home-manager"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1778585655,
+        "narHash": "sha256-yfxy9aTlIgU2Z36H8cJURgYLgjT4qvFeOzoAC/HXcKM=",
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
+        "rev": "42f41abcef13dc81c85407b57aa1fd1bde46e46c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
         "type": "github"
       }
     }
