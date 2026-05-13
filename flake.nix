@@ -2,7 +2,10 @@
   description = "Internally linked and externally customizable flake collection.";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs.follows = "nixpkgs-unstable";
+
     nixpkgs-lib.url = "github:nix-community/nixpkgs.lib";
     systems.url = "github:nix-systems/default";
 
@@ -25,6 +28,17 @@
       url = "github:feel-co/hjem";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.nix-darwin.follows = "nix-darwin";
+    };
+
+    flake-aspects.url = "github:denful/flake-aspects";
+    den.url = "github:denful/den";
+    flake-file.url = "github:denful/flake-file";
+    import-tree.url = "github:denful/import-tree";
+    dendrix = {
+      # TODO: to be renamed to DUR
+      url = "github:denful/dendrix";
+      inputs.import-tree.follows = "import-tree";
+      inputs.nixpkgs-lib.follows = "nixpkgs-lib";
     };
   };
 
