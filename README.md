@@ -9,7 +9,7 @@ reference them later on in any future flakes.
 `flake-collect` is just that, a collection of flake inputs configured to work together. Overall, it does a few simple things:
 
 - Act as a single source of flake inputs.
-- Make `inputs.[...].follows` unnecessary, reducing boilerplate.
+- Make input urls and subinputs unnecessary, reducing boilerplate.
 - Reduce the need for identical inputs in different flakes.
 
 ## Usage
