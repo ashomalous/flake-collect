@@ -61,3 +61,4 @@ an alias in default `flake-collect`.
 ## Contribution
 
 To contribute to this small project, feel free to [open an issue](https://github.com/ashomalous/flake-collect/issues/new).
+
